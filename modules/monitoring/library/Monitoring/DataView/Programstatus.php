@@ -20,6 +20,7 @@ class Programstatus extends DataView
             'status_update_time',
             'program_start_time',
             'program_end_time',
+            'program_version',
             'is_currently_running',
             'process_id',
             'daemon_mode',

@@ -51,6 +51,7 @@ class Monitoring_ProcessController extends Controller
                     'process_id',
                     'program_start_time',
                     'status_update_time',
+                    'program_version',
                     'last_command_check',
                     'last_log_rotation',
                     'global_service_event_handler',

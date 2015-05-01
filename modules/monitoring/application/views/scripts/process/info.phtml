@@ -20,6 +20,10 @@ if (! $this->compact): ?>
             <table class="avp">
                 <tbody>
                 <tr>
+                    <th><?= $this->translate('Program Version') ?></th>
+                    <td><?= $this->programStatus->program_version ?></td>
+                </tr>
+                <tr>
                     <th><?= $this->translate('Program Start Time') ?></th>
                     <td><?= $this->dateFormat()->formatDateTime($this->programStatus->program_start_time) ?></td>
                 </tr>

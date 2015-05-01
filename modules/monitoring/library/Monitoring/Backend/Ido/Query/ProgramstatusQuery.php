@@ -12,6 +12,7 @@ class ProgramstatusQuery extends IdoQuery
         'programstatus' => array(
             'id'                    => 'programstatus_id',
             'status_update_time'    => 'UNIX_TIMESTAMP(programstatus.status_update_time)',
+            'program_version'       => 'program_version',
             'program_start_time'    => 'UNIX_TIMESTAMP(programstatus.program_start_time)',
             'program_end_time'      => 'UNIX_TIMESTAMP(programstatus.program_end_time)',
             'is_currently_running'  => 'CASE WHEN (programstatus.is_currently_running = 0)
@@ -47,4 +48,13 @@ class ProgramstatusQuery extends IdoQuery
             'global_service_event_handler'      => 'global_service_event_handler',
         )
     );
+/*
+    protected function joinBaseTables()
+    {
+        //only add the program_version if it exists
+        if (version_compare($this->getIdoVersion(), '1.11.8', '<')) {
+            $this->columnMap['programstatus']['program_version'] = '(NULL)';
+        }
+    }
+*/
 }
